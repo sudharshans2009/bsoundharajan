@@ -15,8 +15,8 @@ export default function Home() {
         <Table className="border">
           <TableHeader>
             <TableRow className="w-full">
-              <TableHead className="text-amrita font-semibold">Title of the Project</TableHead>
-              <TableHead className="text-amrita font-semibold w-[250px]">Collaborating Institutions</TableHead>
+              <TableHead className="text-maincolor font-semibold">Title of the Project</TableHead>
+              <TableHead className="text-maincolor font-semibold w-[250px]">Collaborating Institutions</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

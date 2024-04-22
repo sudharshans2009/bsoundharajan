@@ -25,12 +25,12 @@ export const experience = [
   {
     time: <>Since July 2019</>,
     position: <>Associate Professor</>,
-    university: <>Amrita Vishwa Vidyapeetham, India</>
+    university: <>maincolor Vishwa Vidyapeetham, India</>
   },
   {
     time: <>January 2018 - June 2019</>,
     position: <>Assistant Professor (SG)</>,
-    university: <>Amrita Vishwa Vidyapeetham, India</>
+    university: <>maincolor Vishwa Vidyapeetham, India</>
   },
   {
     time: <>August 2016 - January 2018</>,

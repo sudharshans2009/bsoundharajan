@@ -2,22 +2,22 @@ import Link from "next/link";
 
 export const projects = [
   {
-    title: <>Impacts of recent El-Niño Southern Oscillation (ENSO) on the Water-Food-Energy Nexus in South Asia (<Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://amrita.edu/research/project/impacts-recent-el-nino-southern-oscillation-enso-water-food-energy-nexus-south-asia)">https://amrita.edu/research/project/impacts-recent-el-nino-southern-oscillation-enso-water-food-energy-nexus-south-asia</Link>)</>,
+    title: <>Impacts of recent El-Niño Southern Oscillation (ENSO) on the Water-Food-Energy Nexus in South Asia (<Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://maincolor.edu/research/project/impacts-recent-el-nino-southern-oscillation-enso-water-food-energy-nexus-south-asia)">https://maincolor.edu/research/project/impacts-recent-el-nino-southern-oscillation-enso-water-food-energy-nexus-south-asia</Link>)</>,
     funding: <>Swedish Research Council</>,
     completed: false
   },
   {
-    title: <>Water and Energy Saving Reliable Irrigation System (WatEr-ERIS): Solar Energy and Cloud-based Decision Support System for Automated Irrigation System (<Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://amrita.edu/research/project/water-and-energy-saving-reliable-irrigation-system-water-eris-solar-energy-and)">https://amrita.edu/research/project/water-and-energy-saving-reliable-irrigation-system-water-eris-solar-energy-and</Link>)</>,
+    title: <>Water and Energy Saving Reliable Irrigation System (WatEr-ERIS): Solar Energy and Cloud-based Decision Support System for Automated Irrigation System (<Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://maincolor.edu/research/project/water-and-energy-saving-reliable-irrigation-system-water-eris-solar-energy-and)">https://maincolor.edu/research/project/water-and-energy-saving-reliable-irrigation-system-water-eris-solar-energy-and</Link>)</>,
     funding: <>Science & Engineering Research Board</>,
     completed: false
   },
   {
-    title: <>Structured Dialogues for Sustainable Urban Water Management (<Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://amrita.edu/research/project/structured-dialogues-sustainable-urban-water-management-copi)">https://amrita.edu/research/project/structured-dialogues-sustainable-urban-water-management-copi</Link>)</>,
+    title: <>Structured Dialogues for Sustainable Urban Water Management (<Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://maincolor.edu/research/project/structured-dialogues-sustainable-urban-water-management-copi)">https://maincolor.edu/research/project/structured-dialogues-sustainable-urban-water-management-copi</Link>)</>,
     funding: <>Department of Science and Technology</>,
     completed: false
   },
   {
-    title: <>Mitigation of dam induced flood disaster due to hydrological extremes (<Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://amrita.edu/research/project/mitigation-dam-induced-flood-disaster-due-hydrological-extremes-copi)">https://amrita.edu/research/project/mitigation-dam-induced-flood-disaster-due-hydrological-extremes-copi</Link>)</>,
+    title: <>Mitigation of dam induced flood disaster due to hydrological extremes (<Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://maincolor.edu/research/project/mitigation-dam-induced-flood-disaster-due-hydrological-extremes-copi)">https://maincolor.edu/research/project/mitigation-dam-induced-flood-disaster-due-hydrological-extremes-copi</Link>)</>,
     funding: <>Ministry of Education (SPARC)</>,
     completed: false
   },
@@ -27,7 +27,7 @@ export const projects = [
     completed: false
   },
   {
-    title: <>Understanding Impacts of El-Nino events on the Indian Agricultural Productivity (<Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://amrita.edu/research/project/understanding-impacts-el-nino-events-indian-agricultural-productivity-copi)">https://amrita.edu/research/project/understanding-impacts-el-nino-events-indian-agricultural-productivity-copi</Link>)</>,
+    title: <>Understanding Impacts of El-Nino events on the Indian Agricultural Productivity (<Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://maincolor.edu/research/project/understanding-impacts-el-nino-events-indian-agricultural-productivity-copi)">https://maincolor.edu/research/project/understanding-impacts-el-nino-events-indian-agricultural-productivity-copi</Link>)</>,
     funding: <>Global Challenge Research Fund</>,
     completed: true
   },

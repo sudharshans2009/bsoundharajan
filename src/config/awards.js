@@ -1,8 +1,8 @@
 export const awards = [
   {
     year: <>2021</>,
-    award: <>Amrita Innovation & Research Awards 2021: Publication Merit Award</>,
-    university: <>Amrita Vishwa Vidyapeetham</>
+    award: <>maincolor Innovation & Research Awards 2021: Publication Merit Award</>,
+    university: <>maincolor Vishwa Vidyapeetham</>
   },
   {
     year: <>2014</>,
@@ -31,7 +31,7 @@ export const invitedTalks = [
 ];
 
 export const workshops = [
-  <>SPARC & UKIERI Sponsored Webinar on Hydrological Extremes: Modelling and Mitigation Measures, 27-29 Oct 2021 (Organisers: IIT Roorkee, Amrita Vishwa Vidyapeetham & Heriot-Watt University, UK).</>,
-  <>International Symposium on Water Sustainability: Challenges, Technologies & Opportunities, Amrita Vishwa Vidyapeetham, 22-25 March 2021.</>,
-  <>Webinar on Mitigation of dam induced flood disaster due to hydrological extremes, 21-22 Oct 2020 (Organisers: IIT Roorkee, Amrita Vishwa Vidyapeetham, Heriot-Watt University, UK and University of Calgary, Canada).</>
+  <>SPARC & UKIERI Sponsored Webinar on Hydrological Extremes: Modelling and Mitigation Measures, 27-29 Oct 2021 (Organisers: IIT Roorkee, maincolor Vishwa Vidyapeetham & Heriot-Watt University, UK).</>,
+  <>International Symposium on Water Sustainability: Challenges, Technologies & Opportunities, maincolor Vishwa Vidyapeetham, 22-25 March 2021.</>,
+  <>Webinar on Mitigation of dam induced flood disaster due to hydrological extremes, 21-22 Oct 2020 (Organisers: IIT Roorkee, maincolor Vishwa Vidyapeetham, Heriot-Watt University, UK and University of Calgary, Canada).</>
 ];

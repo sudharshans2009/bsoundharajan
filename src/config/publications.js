@@ -14,7 +14,7 @@ export const journalArticles = [
   {
     year: <>2021</>,
     title: <>Highly effective removal of presence of toxic metal concentrations in the wastewater using microalgae and pre-treatment processing</>,
-    cite: <>Muthuraman, R.M., Murugappan, A. & Soundharajan, B. Highly effective removal of presence of toxic metal concentrations in the wastewater using microalgae and pre-treatment processing. Appl Nanosci (2021). <Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/s13204-021-01795-7">https://doi.org/10.1007/s13204-021-01795-7</Link></>,
+    cite: <>Muthuraman, R.M., Murugappan, A. & Soundharajan, B. Highly effective removal of presence of toxic metal concentrations in the wastewater using microalgae and pre-treatment processing. Appl Nanosci (2021). <Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/s13204-021-01795-7">https://doi.org/10.1007/s13204-021-01795-7</Link></>,
     publisher: <>Springer</>
   },
   {
@@ -30,13 +30,13 @@ export const journalArticles = [
   {
     year: <>2020</>,
     title: <>System Design for Integrating Technologies for Building Water Wise Communities</>,
-    cite: <>Varma D.S. et al. (2020) System Design for Integrating Technologies for Building Water Wise Communities. In: Kumar A., Paprzycki M., Gunjan V. (eds) ICDSMLA 2019. Lecture Notes in Electrical Engineering, vol 601. Springer, Singapore. <Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/978-981-15-1420-3_159">https://doi.org/10.1007/978-981-15-1420-3_159</Link></>,
+    cite: <>Varma D.S. et al. (2020) System Design for Integrating Technologies for Building Water Wise Communities. In: Kumar A., Paprzycki M., Gunjan V. (eds) ICDSMLA 2019. Lecture Notes in Electrical Engineering, vol 601. Springer, Singapore. <Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/978-981-15-1420-3_159">https://doi.org/10.1007/978-981-15-1420-3_159</Link></>,
     publisher: <>SpringerBriefs in Applied Sciences and Technology</>
   },
   {
     year: <>2020</>,
     title: <>Implications of uncertainty in inflow forecasting on reservoir operation for irrigation</>,
-    cite: <>Kasiviswanathan, K.S., Sudheer, K.P., Soundharajan, BS. et al. Implications of uncertainty in inflow forecasting on reservoir operation for irrigation. Paddy Water Environ 19, 99–111 (2021). <Link className="border-b border-amrita hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/s10333-020-00822-7">https://doi.org/10.1007/s10333-020-00822-7</Link></>,
+    cite: <>Kasiviswanathan, K.S., Sudheer, K.P., Soundharajan, BS. et al. Implications of uncertainty in inflow forecasting on reservoir operation for irrigation. Paddy Water Environ 19, 99–111 (2021). <Link className="border-b border-maincolor hover:border-white transition-all border-dashed" href="https://doi.org/10.1007/s10333-020-00822-7">https://doi.org/10.1007/s10333-020-00822-7</Link></>,
     publisher: <>Springer</>
   },
   {
