@@ -1,15 +1,10 @@
-"use client";
+import { redirect } from "next/navigation";
 
-import { useEffect } from "react";
-
-export default function Home() {
-  useEffect(() => {
-    window.location = "/";
-  }, []);
-
+export default function() {
+  redirect("/bio");
   return (
     <div>
-      Redirecting...
+      Redirecting to <code>/bio</code>...
     </div>
   );
 }
