@@ -2,5 +2,9 @@ import { redirect } from "next/navigation";
 
 export default function() {
   redirect("/bio");
-  return <></>;
+  return (
+    <div>
+      Redirecting to <code>/bio</code>...
+    </div>
+  );
 }

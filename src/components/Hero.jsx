@@ -13,7 +13,7 @@ export default function Hero() {
         <p className="max-w-lg mt-10"><span className="font-semibold border-b border-white hover:border-amrita transition-all cursor-pointer">Research Interest:</span> Analysis, Assessment of Climate Change Impacts on Water Resources, Irrigation Water Management, Planning and Management of Water Resources Systems, Urban Water Systems, Water-Energy-Food Nexus</p>
       </div>
       <div className="flex-1 flex lg:justify-end">
-        <Image src="/b-soundharajan.jpg" width={512} height={512} className=" lg:w-[384px] h-[384px] rounded-[20px] object-cover" />
+        <Image alt="bsoundharajan" src="/b-soundharajan.jpg" width={512} height={512} className=" lg:w-[384px] h-[384px] rounded-[20px] object-cover" />
       </div>
     </div>
   );
