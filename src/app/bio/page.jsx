@@ -15,7 +15,7 @@ export default function Bio() {
         Dr. B. Soundharajan joined the maincolor in 2018 after his Post-Doctoral research at the Heriot-Watt University, UK. Dr. B. Soundharajan completed his PhD in Water Resources Engineering at Indian Institute of Technology Madras. His research focuses on the analysis, planning and management of water resources systems; understanding the behaviour of water supply reservoirs and the development of effective reservoir management and planning tools; Water-Energy-Food Nexus; and Urban Water Systems. Dr. B. Soundharajan has more than 10 years of research and teaching experience.
       </div>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
-        <Table className="border">
+        <Table className="border w-full">
           <TableHeader>
             <TableRow className="w-full">
               <TableHead className="text-maincolor font-semibold">Experience</TableHead>
@@ -33,7 +33,7 @@ export default function Bio() {
         </Table>
       </div>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
-        <Table className="border">
+        <Table className="border w-full">
           <TableHeader>
             <TableRow className="w-full">
               <TableHead className="text-maincolor font-semibold">Education</TableHead>
