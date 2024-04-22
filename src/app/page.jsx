@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-export default function() {
+export default function Home() {
   redirect("/bio");
   return (
     <div>
