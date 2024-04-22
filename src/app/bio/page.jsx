@@ -8,7 +8,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export default function Home() {
+export default function Bio() {
   return (
     <>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
