@@ -22,7 +22,7 @@ export default function Home() {
           </TableHeader> */}
           <TableBody>
             {awards.map(({ year, award, university }, index) => (
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{year}</TableCell>
                 <TableCell>{award}</TableCell>
                 <TableCell>{university}</TableCell>
@@ -34,16 +34,16 @@ export default function Home() {
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
         <h1 className="font-semibold text-[20px] text-amrita mb-5">Invited Talks / Lectures in FDP / Conference / Workshop / Summer School</h1>
         <ul className="flex flex-col gap-5 pl-5 list-disc">
-          {invitedTalks.map(talk => (
-            <li>{talk}</li>
+          {invitedTalks.map((talk, index) => (
+            <li key={index}>{talk}</li>
           ))}
         </ul>
       </div>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
         <h1 className="font-semibold text-[20px] text-amrita mb-5">Workshops / Conferences / Webinars Organised / Co-Organised</h1>
         <ul className="flex flex-col gap-5 pl-5 list-disc">
-          {workshops.map(talk => (
-            <li>{talk}</li>
+          {workshops.map((talk, index) => (
+            <li key={index}>{talk}</li>
           ))}
         </ul>
       </div>

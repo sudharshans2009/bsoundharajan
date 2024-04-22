@@ -21,7 +21,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             {collaborations.map(({ title, institutions }, index) => (
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{title}</TableCell>
                 <TableCell>
                   {institutions.map((institution, index) => (

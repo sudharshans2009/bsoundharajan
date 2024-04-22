@@ -22,7 +22,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             {projects.map(({ title, funding, completed }, index) => !completed &&(
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{title}</TableCell>
                 <TableCell>{funding}</TableCell>
               </TableRow>
@@ -41,7 +41,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             {projects.map(({ title, funding, completed }, index) => completed &&(
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{title}</TableCell>
                 <TableCell>{funding}</TableCell>
               </TableRow>

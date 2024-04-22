@@ -17,8 +17,8 @@ export default function Navbar() {
           <Link href="/">Dr. B. Soundharajan</Link>
         </h1>
         <div className="md:flex hidden items-center justify-center gap-10">
-          {nav.map(({ title, link }) => (
-            <Link href={link} className={cn("border-b border-amrita hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
+          {nav.map(({ title, link }, index) => (
+            <Link key={index} href={link} className={cn("border-b border-amrita hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
           ))}
         </div>
         <div className="flex md:hidden flex-col gap-1 cursor-pointer" onClick={() => setOpen(prev => !prev)}>
@@ -28,8 +28,8 @@ export default function Navbar() {
         </div>
         {open && (
           <div className="flex md:hidden flex-col bg-amrita p-5 absolute top-[100px] right-[20px] gap-2 rounded-[20px]">
-            {nav.map(({ title, link }) => (
-              <Link href={link} className={cn("border-b border-amrita hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
+            {nav.map(({ title, link }, index) => (
+              <Link key={index} href={link} className={cn("border-b border-amrita hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
             ))}
           </div>
         )}

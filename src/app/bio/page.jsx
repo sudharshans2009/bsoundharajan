@@ -23,7 +23,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             {experience.map(({ time, position, university }, index) => (
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{time}</TableCell>
                 <TableCell>{position}{index === 0 && <> <span className="font-semibold text-amrita border-b border-white hover:border-amrita transition-all cursor-pointer">(Current)</span></>}</TableCell>
                 <TableCell>{university}</TableCell>
@@ -41,7 +41,7 @@ export default function Home() {
           </TableHeader>
           <TableBody>
             {education.map(({ education, university, time }) => (
-              <TableRow>
+              <TableRow key={index}>
                 <TableCell>{education}</TableCell>
                 <TableCell>{university}</TableCell>
                 <TableCell>{time}</TableCell>

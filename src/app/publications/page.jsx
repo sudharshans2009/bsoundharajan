@@ -22,7 +22,7 @@ export default function Publications() {
               <div className="p-5 flex flex-col border border-amrita rounded-[10px] text-amrita">
                 <h1 className="font-semibold text-[20px] border-b border-amrita transition-all cursor-pointer">Journal Article</h1>
                 {journalArticles.map((article, index) => (
-                  <div className={cn("flex flex-col border-amrita py-5", journalArticles.length !== index + 1 && "border-b")}>
+                  <div key={index} className={cn("flex flex-col border-amrita py-5", journalArticles.length !== index + 1 && "border-b")}>
                     <p className="text-gray-800"><span className="font-semibold">Year:</span> {article.year}</p>
                     <p className="font-semibold cursor-pointer">{article.title}</p>
                     {(article?.cite || article?.publisher) && <br />}
@@ -36,7 +36,7 @@ export default function Publications() {
               <div className="p-5 flex flex-col border border-amrita rounded-[10px] text-amrita">
                 <h1 className="font-semibold text-[20px] border-b border-amrita transition-all cursor-pointer">Conference Paper</h1>
                 {conferencePapers.map((article, index) => (
-                  <div className={cn("flex flex-col border-amrita py-5", conferencePapers.length !== index + 1 && "border-b")}>
+                  <div key={index} className={cn("flex flex-col border-amrita py-5", conferencePapers.length !== index + 1 && "border-b")}>
                     <p className="text-gray-800"><span className="font-semibold">Year:</span> {article.year}</p>
                     <p className="font-semibold cursor-pointer">{article.title}</p>
                     {(article?.cite || article?.publisher) && <br />}
