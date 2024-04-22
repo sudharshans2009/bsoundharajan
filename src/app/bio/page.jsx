@@ -40,7 +40,7 @@ export default function Bio() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {education.map(({ education, university, time }) => (
+            {education.map(({ education, university, time }, index) => (
               <TableRow key={index}>
                 <TableCell>{education}</TableCell>
                 <TableCell>{university}</TableCell>
