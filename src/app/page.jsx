@@ -65,7 +65,6 @@ export default async function Hero() {
           <CarouselPrevious />
           <CarouselContent>
             {database.map(({ Title, Image }, index) => { 
-              console.log(Image[0].file.url);
               return (
               <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
                 <div className="border relative group cursor-pointer">
