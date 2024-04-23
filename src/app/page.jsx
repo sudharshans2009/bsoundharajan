@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -8,8 +7,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { formatText } from "@/lib/utils";
 
-export default function Hero() {
+export default async function Hero() {
+  const rawDatabase = await queryDatabase("gallery");
+  const database = await formatDatabase(rawDatabase).sort((a, b) => a.Order - b.Order);
+
   return (
     <>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5 flex gap-10 lg:flex-row flex-col-reverse">
@@ -25,7 +29,7 @@ export default function Hero() {
           <Image alt="bsoundharajan" src="/b-soundharajan.jpg" width={512} height={512} className=" lg:w-[384px] h-[384px] rounded-[20px] object-cover" />
         </div>
       </div>
-      <div className="mt-20 w-full max-w-5xl mx-auto p-5">
+      {/* <div className="mt-20 w-full max-w-5xl mx-auto p-5">
         <h1 className="font-semibold text-[20px] text-maincolor mb-5">New</h1>
         <Carousel
           opts={{
@@ -49,7 +53,7 @@ export default function Hero() {
           </CarouselContent>
           <CarouselNext />
         </Carousel>
-      </div>
+      </div> */}
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
         <h1 className="font-semibold text-[20px] text-maincolor mb-5">Gallery</h1>
         <Carousel
@@ -60,17 +64,18 @@ export default function Hero() {
         >
           <CarouselPrevious />
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {database.map(({ Title, Image }, index) => { 
+              console.log(Image[0].file.url);
+              return (
               <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-3xl font-semibold">{index + 1}</span>
-                    </CardContent>
-                  </Card>
+                <div className="border relative group cursor-pointer">
+                  <img src={Image[0].file.url} className="w-full opacity-80 hover:opacity-100 transition-all" />
+                  <span className="text-3xl font-semibold absolute z-10 bottom-5 left-5 right-5 group-hover:opacity-100 opacity-0 transition-all flex justify-center">
+                    <div className="rounded-[10px] bg-white p-1">{formatText(Title)}</div>
+                  </span>
                 </div>
               </CarouselItem>
-            ))}
+            )})}
           </CarouselContent>
           <CarouselNext />
         </Carousel>

@@ -16,18 +16,18 @@ export default function Navbar() {
         <h1 className="text-[20px] font-semibold">
           <Link href="/">Dr. B. Soundharajan</Link>
         </h1>
-        <div className="md:flex hidden items-center justify-center gap-10">
+        <div className="lg:flex hidden items-center justify-center gap-10">
           {nav.map(({ title, link }, index) => (
             <Link key={index} href={link} className={cn("border-b border-maincolor hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
           ))}
         </div>
-        <div className="flex md:hidden flex-col gap-1 cursor-pointer" onClick={() => setOpen(prev => !prev)}>
+        <div className="flex lg:hidden flex-col gap-1 cursor-pointer" onClick={() => setOpen(prev => !prev)}>
           <div className={cn("w-6 h-1 bg-white transition-all", open && "translate-x-0 translate-y-2 rotate-45")}></div>
           <div className={cn("w-6 h-1 bg-white transition-all", open && "-rotate-45")}></div>
           <div className={cn("w-6 h-1 bg-white transition-all", open && "translate-x-0 -translate-y-2 -rotate-45")}></div>
         </div>
         {open && (
-          <div className="flex md:hidden flex-col bg-maincolor p-5 absolute top-[100px] right-[20px] gap-2 rounded-[20px]">
+          <div className="flex lg:hidden flex-col bg-maincolor p-5 absolute top-[100px] right-[20px] gap-2 rounded-[20px]">
             {nav.map(({ title, link }, index) => (
               <Link key={index} href={link} className={cn("border-b border-maincolor hover:border-white transition-all", link === pathname && "border-white")}>{title}</Link>
             ))}

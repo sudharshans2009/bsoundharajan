@@ -1,8 +1,13 @@
-import { conferencePapers, journalArticles } from "@/config/publications";
-import { cn } from "@/lib/utils";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { cn, formatText } from "@/lib/utils";
 import Link from "next/link";
 
-export default function Publications() {
+export default async function Publications() {  
+  const rawDatabase = await queryDatabase("publications");
+  const database = await formatDatabase(rawDatabase);
+  const conferencePapers = database.filter(({ Type }) => Type.name === "Conference Papers").sort((a, b) => b.Order - a.Order);
+  const journalArticles = database.filter(({ Type }) => Type.name === "Journal Articles").sort((a, b) => b.Order - a.Order);
+
   return (
     <>
       <div className=" w-full max-w-5xl mx-auto p-5">
@@ -23,11 +28,11 @@ export default function Publications() {
                 <h1 className="font-semibold text-[20px] border-b transition-all cursor-pointer">Journal Article</h1>
                 {journalArticles.map((article, index) => (
                   <div key={index} className={cn("flex flex-col py-5", journalArticles.length !== index + 1 && "border-b")}>
-                    <p className="text-gray-800"><span className="font-semibold">Year:</span> {article.year}</p>
-                    <p className="font-semibold cursor-pointer">{article.title}</p>
-                    {(article?.cite || article?.publisher) && <br />}
-                    {article?.cite && <p className="text-gray-800"><span className="font-semibold">Cite this Research Publication:</span> {article?.cite}</p>}
-                    {article?.publisher && <p className="text-gray-800"><span className="font-semibold">Publisher:</span> {article?.publisher}</p>}
+                    <p className="text-gray-800"><span className="font-semibold">Year:</span> {formatText(article.Date)}</p>
+                    <p className="font-semibold cursor-pointer">{formatText(article.Title, { underline: false })}</p>
+                    {(article?.Cite.length > 0 || article?.Publisher.length > 0) && <br />}
+                    {article?.Cite.length > 0 && <p className="text-gray-800"><span className="font-semibold">Cite this Research Publication:</span> {formatText(article?.Cite)}</p>}
+                    {article?.Publisher.length > 0 && <p className="text-gray-800"><span className="font-semibold">Publisher:</span> {formatText(article?.Publisher)}</p>}
                   </div>
                 ))}
               </div>
@@ -36,12 +41,12 @@ export default function Publications() {
               <div className="p-5 flex flex-col border text-maincolor">
                 <h1 className="font-semibold text-[20px] border-b transition-all cursor-pointer">Conference Paper</h1>
                 {conferencePapers.map((article, index) => (
-                  <div key={index} className={cn("flex flex-col py-5", conferencePapers.length !== index + 1 && "border-b")}>
-                    <p className="text-gray-800"><span className="font-semibold">Year:</span> {article.year}</p>
-                    <p className="font-semibold cursor-pointer">{article.title}</p>
-                    {(article?.cite || article?.publisher) && <br />}
-                    {article?.cite && <p className="text-gray-800"><span className="font-semibold">Cite this Research Publication:</span> {article?.cite}</p>}
-                    {article?.publisher && <p className="text-gray-800"><span className="font-semibold">Publisher:</span> {article?.publisher}</p>}
+                  <div key={index} className={cn("flex flex-col py-5", journalArticles.length !== index + 1 && "border-b")}>
+                    <p className="text-gray-800"><span className="font-semibold">Year:</span> {formatText(article.Date)}</p>
+                    <p className="font-semibold cursor-pointer">{formatText(article.Title, { linkUnderline: false })}</p>
+                    {(article?.Cite.length > 0 || article?.Publisher.length > 0) && <br />}
+                    {article?.Cite.length > 0 && <p className="text-gray-800"><span className="font-semibold">Cite this Research Publication:</span> {formatText(article?.Cite)}</p>}
+                    {article?.Publisher.length > 0 && <p className="text-gray-800"><span className="font-semibold">Publisher:</span> {formatText(article?.Publisher)}</p>}
                   </div>
                 ))}
               </div>

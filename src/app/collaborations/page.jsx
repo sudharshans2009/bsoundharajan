@@ -6,9 +6,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { collaborations } from "@/config/collaborations";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { formatText } from "@/lib/utils";
 
-export default function Home() {
+export default async function Collaborations() {
+  const rawDatabase = await queryDatabase("collaborations");
+  const database = await formatDatabase(rawDatabase).sort((a, b) => b.Order - a.Order);
+
   return (
     <>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
@@ -20,14 +24,14 @@ export default function Home() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {collaborations.map(({ title, institutions }, index) => (
+            {database.map(({ Title, Institutions }, index) => (
               <TableRow key={index}>
-                <TableCell>{title}</TableCell>
+                <TableCell>{formatText(Title, { bold: false, linkUnderline: true })}</TableCell>
                 <TableCell>
-                  {institutions.map((institution, index) => (
+                  {Institutions.map(({ name }, index) => (
                     <>
-                      <p>{institution}</p>
-                      {institutions.length !== index + 1 && <br />}
+                      <p>{name}</p>
+                      {Institutions.length !== index + 1 && <br />}
                     </>
                   ))}
                 </TableCell>

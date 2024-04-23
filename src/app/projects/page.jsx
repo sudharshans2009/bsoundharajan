@@ -6,9 +6,13 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { projects } from "@/config/projects";
+import { formatDatabase, queryDatabase } from "@/lib/notion";
+import { formatText } from "@/lib/utils";
 
-export default function Home() {
+export default async function Projects() {
+  const rawDatabase = await queryDatabase("projects");
+  const database = await formatDatabase(rawDatabase).sort((a, b) => b.Order - a.Order);
+
   return (
     <>
       <div className="mt-20 w-full max-w-5xl mx-auto p-5">
@@ -21,10 +25,10 @@ export default function Home() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {projects.map(({ title, funding, completed }, index) => !completed &&(
+            {database.map(({ Title, Funding, Completed }, index) => !Completed &&(
               <TableRow key={index}>
-                <TableCell>{title}</TableCell>
-                <TableCell>{funding}</TableCell>
+                <TableCell>{formatText(Title, { bold: false, linkUnderline: true })}</TableCell>
+                <TableCell>{formatText(Funding)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -40,10 +44,10 @@ export default function Home() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {projects.map(({ title, funding, completed }, index) => completed &&(
+            {database.map(({ Title, Funding, Completed }, index) => Completed &&(
               <TableRow key={index}>
-                <TableCell>{title}</TableCell>
-                <TableCell>{funding}</TableCell>
+                <TableCell>{formatText(Title, { bold: false, linkUnderline: true })}</TableCell>
+                <TableCell>{formatText(Funding)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
