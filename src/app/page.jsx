@@ -10,6 +10,8 @@ import {
 import { formatDatabase, queryDatabase } from "@/lib/notion";
 import { formatText } from "@/lib/utils";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Hero() {
   const rawDatabase = await queryDatabase("gallery");
   const database = await formatDatabase(rawDatabase).sort((a, b) => a.Order - b.Order);

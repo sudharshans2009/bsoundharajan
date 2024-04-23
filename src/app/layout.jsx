@@ -9,6 +9,8 @@ const inter = Poppins({
   weight: ["400", "500", "600"]
 });
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Dr. B. Soundharajan",
   description: "Associate Professor, Department of Civil Engineering, School of Engineering, Coimbatore | Visiting Faculty, School of Agricultural Sciences, Coimbatore",

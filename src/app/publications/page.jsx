@@ -2,6 +2,8 @@ import { formatDatabase, queryDatabase } from "@/lib/notion";
 import { cn, formatText } from "@/lib/utils";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Publications() {  
   const rawDatabase = await queryDatabase("publications");
   const database = await formatDatabase(rawDatabase);

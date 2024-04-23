@@ -7,6 +7,8 @@ import {
 import { formatDatabase, queryDatabase } from "@/lib/notion";
 import { formatText } from "@/lib/utils";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Awards() {
   const rawAwardsDatabase = await queryDatabase("awards");
   const awardsDatabase = await formatDatabase(rawAwardsDatabase).sort((a, b) => b.Order - a.Order);

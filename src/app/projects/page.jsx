@@ -9,6 +9,8 @@ import {
 import { formatDatabase, queryDatabase } from "@/lib/notion";
 import { formatText } from "@/lib/utils";
 
+export const dynamic = 'force-dynamic';
+
 export default async function Projects() {
   const rawDatabase = await queryDatabase("projects");
   const database = await formatDatabase(rawDatabase).sort((a, b) => b.Order - a.Order);
