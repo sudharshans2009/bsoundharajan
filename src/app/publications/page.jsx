@@ -43,7 +43,7 @@ export default async function Publications() {
               <div className="p-5 flex flex-col border text-maincolor">
                 <h1 className="font-semibold text-[20px] border-b transition-all cursor-pointer">Conference Paper</h1>
                 {conferencePapers.map((article, index) => (
-                  <div key={index} className={cn("flex flex-col py-5", journalArticles.length !== index + 1 && "border-b")}>
+                  <div key={index} className={cn("flex flex-col py-5", conferencePapers.length !== index + 1 && "border-b")}>
                     <p className="text-gray-800"><span className="font-semibold">Year:</span> {formatText(article.Date)}</p>
                     <p className="font-semibold cursor-pointer">{formatText(article.Title, { linkUnderline: false })}</p>
                     {(article?.Cite.length > 0 || article?.Publisher.length > 0) && <br />}
